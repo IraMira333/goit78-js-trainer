@@ -422,3 +422,57 @@
 // countProps({ mail: "poly@mail.com", isOnline: true, score: 500 });
 
 //!====================================================
+//Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of.
+//Запиши у змінну keys масив ключів власних властивостей об'єкта apartment,
+//і додай в масив values всі значення його властивостей.
+
+// const apartment = {
+//  descr: 'Spacious apartment in the city center',
+//  rating: 4,
+//  price: 2153
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//  values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+//!===========================================
+// function countProps(object) {
+//  // Change code below this line
+//  const propCount = Object.keys(object).length;
+
+//  console.log(propCount);
+//  return propCount;
+//  // Change code above this line
+// }
+// countProps({});
+// countProps({ name: 'Mango', age: 2 });
+// countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 });
+
+//!==============================================
+//Напиши функцію countTotalSalary(salaries), яка приймає об'єкт зарплат,
+//де ім'я властивості - це ім'я співробітника, а значення властивості - це зарплата.
+//Функція повинна розрахувати загальну суму зарплат співробітників і повернути її.
+//Використовуй змінну totalSalary для зберігання загальної суми зарплати.
+
+// function countTotalSalary(salaries) {
+//  let totalSalary = 0;
+//  // Change code below this line
+//  const salariesArray = Object.values(salaries);
+//  for (let salary of salariesArray) {
+//   totalSalary += salary;
+//  }
+//  console.log(totalSalary);
+//  // Change code above this line
+//  return totalSalary;
+// }
+// countTotalSalary({});
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+// countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 });
+
+//!==================================================
