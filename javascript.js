@@ -476,3 +476,90 @@
 // countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 });
 
 //!==================================================
+//Перебери масив об'єктів colors, використовуючи цикл for...of.
+//Додай у масив hexColors значення властивостей hex,
+//а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors.
+
+// const colors = [
+//  { hex: '#f44336', rgb: '244,67,54' },
+//  { hex: '#2196f3', rgb: '33,150,243' },
+//  { hex: '#4caf50', rgb: '76,175,80' },
+//  { hex: '#ffeb3b', rgb: '255,235,59' }
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (let color of colors) {
+//  hexColors.push(color.hex);
+//  rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+//!====================================================
+//Напиши функцію getProductPrice(productName), яка приймає один параметр
+//productName - назва продукту. Функція шукає об'єкт продукту з таким ім'ям
+// (властивість name) в масиві products і повертає його ціну
+//(властивість price). Якщо продукт з такою назвою не знайдений,
+//функція повинна повертати null.
+
+// const products = [
+//  { name: 'Radar', price: 1300, quantity: 4 },
+//  { name: 'Scanner', price: 2700, quantity: 3 },
+//  { name: 'Droid', price: 400, quantity: 7 },
+//  { name: 'Grip', price: 1200, quantity: 9 }
+// ];
+
+// function getProductPrice(productName) {
+//  // Change code below this line
+//  for (let product of products) {
+//   console.log(product.name);
+//   if (productName === product.name) {
+//    console.log(`${product.name} коштує ${product.price}`);
+//    return product.price;
+//   }
+//  }
+//  console.log(`${productName} не знайдено`);
+//  return null;
+//  // Change code above this line
+// }
+// getProductPrice('Radar');
+// getProductPrice('Grip');
+// getProductPrice('Scanner');
+// getProductPrice('Droid');
+// getProductPrice('Engine');
+
+//!===================================================
+//Напиши функцію getAllPropValues(propName), яка приймає один параметр
+//propName - ім'я (ключ) властивості. Функція повинна повернути масив
+//всіх значень властивості з таким ім'ям з кожного об'єкта в масиві
+//products. Якщо в об'єктах відсутні властивості з таким ім'ям,
+//функція повинна повернути порожній масив.
+
+const products = [
+ { name: 'Radar', price: 1300, quantity: 4 },
+ { name: 'Scanner', price: 2700, quantity: 3 },
+ { name: 'Droid', price: 400, quantity: 7 },
+ { name: 'Grip', price: 1200, quantity: 9 }
+];
+
+function getAllPropValues(propName) {
+ // Change code below this line
+ let newArray = [];
+ for (let product of products) {
+  console.log(Object.keys(product));
+  console.log(Object.values(product));
+  if (Object.keys(product).includes(propName)) {
+    return console.log(`${propName} true`);
+   //    newArray.push(Object.values(product));
+  }
+ }
+ 
+ return console.log(`${propName} false`);
+ // Change code above this line
+}
+getAllPropValues('name');
+// getAllPropValues('quantity');
+// getAllPropValues('price');
+getAllPropValues('category');
