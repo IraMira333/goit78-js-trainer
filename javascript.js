@@ -537,29 +537,66 @@
 //products. Якщо в об'єктах відсутні властивості з таким ім'ям,
 //функція повинна повернути порожній масив.
 
-const products = [
- { name: 'Radar', price: 1300, quantity: 4 },
- { name: 'Scanner', price: 2700, quantity: 3 },
- { name: 'Droid', price: 400, quantity: 7 },
- { name: 'Grip', price: 1200, quantity: 9 }
-];
+// const products = [
+//  { name: 'Radar', price: 1300, quantity: 4 },
+//  { name: 'Scanner', price: 2700, quantity: 3 },
+//  { name: 'Droid', price: 400, quantity: 7 },
+//  { name: 'Grip', price: 1200, quantity: 9 }
+// ];
 
-function getAllPropValues(propName) {
- // Change code below this line
- let newArray = [];
- for (let product of products) {
-  console.log(Object.keys(product));
-  console.log(Object.values(product));
-  if (Object.keys(product).includes(propName)) {
-    return console.log(`${propName} true`);
-   //    newArray.push(Object.values(product));
-  }
- }
- 
- return console.log(`${propName} false`);
- // Change code above this line
-}
-getAllPropValues('name');
+// function getAllPropValues(propName) {
+//  // Change code below this line
+
+//  let newArray = [];
+//  for (let product of products) {
+//   let oneProduct = Object.keys(product);
+//   if (oneProduct.includes(propName)) {
+//    newArray.push(product[propName]);
+//   }
+//  }
+//  console.log(newArray);
+//  return newArray;
+//  // Change code above this line
+// }
+// getAllPropValues('name');
 // getAllPropValues('quantity');
 // getAllPropValues('price');
-getAllPropValues('category');
+// getAllPropValues('category');
+
+//!=======================================
+//Напиши функцію calculateTotalPrice(productName),
+//яка приймає один параметр productName - назва товару.
+//Функція повинна повернути загальну вартість (ціна * кількість) товару
+//з таким ім'ям з масиву products.
+
+// const products = [
+//  { name: 'Radar', price: 1300, quantity: 4 },
+//  { name: 'Scanner', price: 2700, quantity: 3 },
+//  { name: 'Droid', price: 400, quantity: 7 },
+//  { name: 'Grip', price: 1200, quantity: 9 }
+// ];
+
+// function calculateTotalPrice(productName) {
+//  // Change code below this line
+//  let sumOfProduct = 0;
+//  for (let product of products) {
+    
+//   if (product.name === productName) {
+//     sumOfProduct = product.price * product.quantity;
+//    console.log(`Загальна вартість ${productName} =`, sumOfProduct) ;
+   
+//    return sumOfProduct;
+//   }
+//  }
+//  console.log(`Товар ${productName} не знайдено на складі`);
+//  return sumOfProduct;
+//  // Change code above this line
+// }
+// calculateTotalPrice('Blaster');
+// calculateTotalPrice('Radar');
+// calculateTotalPrice('Droid');
+// calculateTotalPrice('Grip');
+// calculateTotalPrice('Scanner');
+
+//!=========================================
+
