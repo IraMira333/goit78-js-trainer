@@ -833,3 +833,52 @@
 // atTheOldToad.removePotion('Red blood');
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
 // atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
+
+//!==========================================
+//* МОДУЛЬ 4
+
+// const isRecipientAvailable = Math.random() > 0.5;
+// console.log(isRecipientAvailable);
+
+//==========================================
+// const numbers = [5, 10, 15, 20, 25];
+
+// Класичний for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Індекс ${i}, значення ${numbers[i]}`);
+// }
+
+// // Метод перебирання forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// Анонімна стрілочна функція
+// numbers.forEach((number, index) => {
+//     console.log(`Індекс ${index}, значення ${number}`);
+//   });
+
+// //Стрілочну колбек-функцію також можна оголошувати окремо і передавати на неї посилання.
+//   const logMessage = (number, index) => {
+//     console.log(`Індекс ${index}, значення ${number}`);
+//   };
+  
+//   numbers.forEach(logMessage);
+
+//!========================================
+// Імперативний підхід
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] > 3) {
+//     filteredNumbers.push(numbers[i]);
+//   }
+// }
+
+// console.log(filteredNumbers); // [4, 5]
+
+// Декларативний підхід
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.filter(value => value > 3);
+console.log(filteredNumbers); // [4, 5]
