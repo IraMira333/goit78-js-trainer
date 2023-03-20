@@ -580,11 +580,11 @@
 //  // Change code below this line
 //  let sumOfProduct = 0;
 //  for (let product of products) {
-    
+
 //   if (product.name === productName) {
 //     sumOfProduct = product.price * product.quantity;
 //    console.log(`Загальна вартість ${productName} =`, sumOfProduct) ;
-   
+
 //    return sumOfProduct;
 //   }
 //  }
@@ -599,4 +599,237 @@
 // calculateTotalPrice('Scanner');
 
 //!=========================================
+//У змінній scores зберігається масив результатів тестування.
+//Використовуючи розподіл і методи Math.max() і Math.min(),
+//доповни код таким чином, щоб у змінній bestScore був найвищий бал,
+//а у worstScore - найнижчий.
 
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore, worstScore);
+
+//!============================================
+//У змінних firstGroupScores, secondGroupScores і thirdGroupScores
+//зберігаються результати тестування окремих груп.
+//Використовуючи розподіл, доповни код таким чином, щоб:
+
+//У змінній allScores зберігався масив всіх результатів від першої до третьої групи.
+//У змінній bestScore був найвищий загальний бал.
+//У змінній worstScore був найнижчий загальний бал.
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(bestScore, worstScore);
+
+//!============================================
+//Напиши функцію makeTask(data) яка приймає один параметр data -
+//об'єкт з наступними властивостями.
+
+//text - текст завдання.
+//category - категорія завдання.
+//priority - пріоритет завдання.
+//Функція повинна створити і повернути новий об'єкт завдання,
+//не змінюючи напряму параметр data. У новому об'єкті повинна бути
+//властивість completed, значення якої зберігається в однойменній локальній змінній.
+
+//В параметрі data гарантовано буде тільки властивість text,
+//а інші дві, category і priority, можуть бути відсутніми. Тоді,
+//в новому об'єкті завдання, у властивостях category і priority повинні бути
+//значення за замовчуванням, що зберігаються в однойменних локальних змінних.
+
+// function makeTask(data) {
+//  const completed = false;
+//  const category = 'General';
+//  const priority = 'Normal';
+//  // Change code below this line
+//  const newData = { category, priority, completed, ...data };
+
+//  console.log(newData);
+//  return newData;
+//  // Change code above this line
+// }
+// makeTask({});
+// makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' });
+// makeTask({ category: 'Finance', text: 'Take interest' });
+// makeTask({ priority: 'Low', text: 'Choose shampoo' });
+// makeTask({ text: 'Buy bread' });
+
+//!=============================================
+//Використовуючи операцію rest, доповни код функції add() таким чином,
+//щоб вона приймала будь-яку кількість аргументів, рахувала і повертала їх суму.
+
+// function add(...args) {
+//  let total = 0;
+//  for (let arg of args) {
+//   total += arg;
+//  }
+//  console.log(total);
+//  return total;
+//  // Change code above this line
+// }
+// add(15, 27);
+// add(12, 4, 11, 48);
+// add(32, 6, 13, 19, 8);
+// add(74, 11, 62, 46, 12, 36);
+
+//!=============================================
+//Функція addOverNum() рахує суму всіх аргументів. Зміни параметри і тіло функції
+//addOverNum() таким чином, щоб вона рахувала суму тільки тих аргументів, які
+//більші за задане число. Це число повинно бути першим параметром функції.
+
+// function addOverNum(firstNumber, ...args) {
+//  let total = 0;
+
+//  for (const arg of args) {
+//   if (arg > firstNumber) {
+//    total += arg;
+//   }
+//  }
+//  console.log(total);
+//  return total;
+//  // Change code above this line
+// }
+// addOverNum(50, 15, 27);
+// addOverNum(10, 12, 4, 11, 48, 10, 8);
+// addOverNum(15, 32, 6, 13, 19, 8);
+// addOverNum(20, 74, 11, 62, 46, 12, 36);
+
+//!=================================================
+//Функція findMatches() приймає довільну кількість аргументів. Першим аргументом
+//завжди буде масив чисел, а решта аргументів будуть просто числами.
+
+//Доповни код функції таким чином, щоб вона повертала новий масив matches, в якому
+//будуть тільки ті аргументи, починаючи з другого, які є в масиві першого аргументу.
+
+//Наприклад, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) повинна
+//повернути масив [1, 2], тому що тільки вони є в масиві першого аргументу.
+
+// function findMatches(firstElement, ...args) {
+//  const matches = []; // Don't change this line
+
+//  for (const item of firstElement) {
+//     if (args.includes(item)) {
+//         matches.push(item);
+//     }
+//  }
+//  console.log(matches);
+//  // Change code above this line
+//  return matches;
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41);
+// findMatches([63, 11, 8, 29], 4, 7, 16);
+
+//!======================================================
+//Доповни метод updateBook(oldName, newName) таким чином, щоб він змінював назву
+//книги з oldName на newName у властивості books. Використовуй indexOf() для того,
+//щоб знайти потрібний елемент масиву, і splice() для того, щоб замінити цей елемент.
+
+// const bookShelf = {
+//  books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//  updateBook(oldName, newName) {
+//   // Change code below this line
+//   const position = this.books.indexOf(oldName);
+//   console.log(position);
+//   this.books.splice(position, 1, newName);
+//   console.log(this.books);
+// return this.books;
+//   // Change code above this line
+//  }
+// };
+// bookShelf.updateBook('Haze', 'Dungeon chronicles');
+// bookShelf.updateBook('The last kingdom', 'Dune');
+
+//!======================================================
+//Виконай рефакторинг методів об'єкта atTheOldToad таким чином, щоб вони працювали
+// не з масивом рядків, а з масивом об'єктів.
+
+//getPotions() - метод для отримання всього зілля. Повертає значення властивості potions.
+
+//addPotion(newPotion) - додає зілля newPotion (вже об'єкт) в масив у властивості
+//potions, але тільки, якщо такого зілля ще немає в інвентарі.
+//В іншому випадку повертається рядок.
+
+//removePotion(potionName) - видаляє об'єкт зілля з ім'ям potionName
+// з масиву у властивості potions.
+
+//updatePotionName(oldName, newName) - оновлює властивість name об'єкта-зілля
+// з назвою oldName на newName в масиві potions.
+// const atTheOldToad = {
+//  potions: [
+//   { name: 'Speed potion', price: 460 },
+//   { name: 'Dragon breath', price: 780 },
+//   { name: 'Stone skin', price: 520 }
+//  ],
+ // Change code below this line
+//  getPotions() {
+//   console.log(this.potions);
+//   return this.potions;
+//  },
+
+//  addPotion(newPotion) {
+//   console.log(newPotion.name);
+//   for (const { name } of this.potions) {
+//    if (name === newPotion.name) {
+//     console.log(
+//      `Error! Potion ${newPotion.name} is already in your inventory!`,
+//      this.potions
+//     );
+//     return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//    }
+//   }
+//   console.log(this.potions);
+//   return this.potions.push(newPotion);
+//  },
+
+//  removePotion(potionName) {
+//   for (const item of this.potions) {
+//    if (item.name === potionName) {
+//     console.log(potionName);
+//     const potionIndex = this.potions.indexOf(item);
+//     console.log(potionIndex);
+//     console.log(`Новий список зіль:`, this.potions);
+//     return this.potions.splice(potionIndex, 1);
+//    }
+//   }
+
+//   console.log(`Potion ${potionName} is not in inventory!`);
+//   return `Potion ${potionName} is not in inventory!`;
+//  },
+
+//  updatePotionName(oldName, newName) {
+//   for (const item of this.potions) {
+//    if (item.name === oldName) {
+//     console.log(oldName);
+//     item.name = newName;
+//     console.log(this.potions);
+//     return this.potions;
+//    }
+//   }
+
+//   console.log(`Potion ${oldName} is not in inventory!`);
+//   return `Potion ${oldName} is not in inventory!`;
+//  }
+ // Change code above this line
+// };
+// atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+// atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+// atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+// atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+
+// atTheOldToad.removePotion('Dragon breath');
+// atTheOldToad.removePotion('Speed potion');
+// atTheOldToad.removePotion('Red blood');
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+// atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
