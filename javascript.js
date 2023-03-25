@@ -771,7 +771,7 @@
 //   { name: 'Dragon breath', price: 780 },
 //   { name: 'Stone skin', price: 520 }
 //  ],
- // Change code below this line
+// Change code below this line
 //  getPotions() {
 //   console.log(this.potions);
 //   return this.potions;
@@ -820,7 +820,7 @@
 //   console.log(`Potion ${oldName} is not in inventory!`);
 //   return `Potion ${oldName} is not in inventory!`;
 //  }
- // Change code above this line
+// Change code above this line
 // };
 // atTheOldToad.getPotions();
 // atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
@@ -862,7 +862,7 @@
 //   const logMessage = (number, index) => {
 //     console.log(`Індекс ${index}, значення ${number}`);
 //   };
-  
+
 //   numbers.forEach(logMessage);
 
 //!========================================
@@ -879,6 +879,199 @@
 // console.log(filteredNumbers); // [4, 5]
 
 // Декларативний підхід
-const numbers = [1, 2, 3, 4, 5];
-const filteredNumbers = numbers.filter(value => value > 3);
-console.log(filteredNumbers); // [4, 5]
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = numbers.filter(value => value > 3);
+// console.log(filteredNumbers); // [4, 5]
+
+//!=========================================
+//Необхідно написати логіку обробки замовлення піци. Виконай рефакторинг методу
+//order таким чином, щоб він приймав другим і третім параметром
+//два колбеки onSuccess і onError.
+
+//Якщо у властивості pizzas відсутня піца з назвою з параметра pizzaName,
+//метод order повинен повертати результат виклику колбека onError,
+//передаючи йому аргументом рядок "There is no pizza with a name <имя пиццы>
+//in the assortment."
+//Якщо у властивості pizzas присутня піца з назвою з параметра pizzaName,
+//метод order повинен повертати результат виклику колбека onSuccess,
+//передаючи йому аргументом назву замовленої піци.
+
+// const pizzaPalace = {
+//  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//  order(pizzaName, onSuccess, onError) {
+//   if (this.pizzas.includes(pizzaName)) {
+//    return onSuccess(pizzaName);
+//   }
+//   return onError(pizzaName);
+//  }
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//  return `Error! There is no pizza with a name ${error} in the assortment.`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+//!=======================================================
+//Функція calculateTotalPrice(orderedItems) приймає один параметр
+//orderedItems - масив чисел, і розраховує загальну суму його елементів,
+//яка зберігається у змінній totalPrice і повертається як результат роботи функції.
+
+//Виконай рефакторинг функції таким чином, щоб замість циклу for,
+//вона використовувала метод forEach.
+// function calculateTotalPrice(orderedItems) {
+//  let totalPrice = 0;
+//  // Change code below this line
+//  orderedItems.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+//   totalPrice += number;
+//  });
+
+//  console.log(totalPrice);
+//  // Change code above this line
+//  return totalPrice;
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+//!========================================================
+//Функція filterArray(numbers, value) приймає масив чисел numbers і повертає новий
+//масив, в якому будуть тільки ті елементи оригінального масиву,
+//які більші за значення параметра value.
+
+//Виконай рефакторинг функції таким чином, щоб замість циклу for,
+//вона використовувала метод forEach.
+
+// function filterArray(numbers, value) {
+//  const filteredNumbers = [];
+//  // Change code below this line
+//  numbers.forEach((element) => {
+//     console.log(`Елемент масиву:`, element);
+//   if (element > value) {
+//    filteredNumbers.push(element);
+//   }
+//  });
+
+//  console.log(`New array:`, filteredNumbers);
+//  // Change code above this line
+//  return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+//!====================================================
+//Функція getCommonElements(firstArray, secondArray) приймає два масиви довільної
+//довжини в параметри firstArray і secondArray, і повертає
+//новий масив їхніх спільних елементів, тобто тих, які присутні в обох масивах.
+
+//Виконай рефакторинг функції таким чином, щоб замість циклу for,
+//вона використовувала метод forEach.
+// function getCommonElements(firstArray, secondArray) {
+//  const commonElements = [];
+//  // Change code below this line
+//  firstArray.forEach((element) => {
+//   if (secondArray.includes(element)) {
+//    commonElements.push(element);
+//   }
+//  });
+//  console.log(`New array:`, commonElements);
+
+//  return commonElements;
+//  // Change code above this line
+// }
+// getCommonElements([1, 2, 3], [2, 4])
+// getCommonElements([1, 2, 3], [2, 1, 17, 19])
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])
+// getCommonElements([1, 2, 3], [10, 20, 30])
+
+//!=======================================================
+// const students = ["Віка", "Андрій", "Олег", "Юля", "Борис", "Катя"];
+
+// const inAlphabetOrder = [...students].sort((a, b) => a.localeCompare(b));
+// console.log(inAlphabetOrder); // ['Андрій', 'Борис', 'Віка', 'Катя', 'Олег', 'Юля']
+
+// const inReversedOrder = [...students].sort((a, b) => b.localeCompare(a));
+// console.log(inReversedOrder); // ['Юля', 'Олег', 'Катя', 'Віка', 'Борис', 'Андрій']
+
+//!=========================================================
+// const students = [
+//  { name: 'Банго', score: 83 },
+//  { name: 'Полі', score: 59 },
+//  { name: 'Аякс', score: 37 },
+//  { name: 'Ківі', score: 94 }
+// ];
+// const stuDents = [
+//  { name: 'Банго', score: 83 },
+//  { name: 'Полі', score: 59 },
+//  { name: 'Аякс', score: 37 },
+//  { name: 'Ківі', score: 94 }
+// ];
+// const studenTs = [
+//  { name: 'Банго', score: 83 },
+//  { name: 'Полі', score: 59 },
+//  { name: 'Аякс', score: 37 },
+//  { name: 'Ківі', score: 94 }
+// ];
+
+// const inAscendingScoreOrder = students.sort(
+//  (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// );
+
+// const inDescendingScoreOrder = stuDents.sort(
+//  (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+
+// const inAlphabeticalOrder = studenTs.sort((firstStudent, secondStudent) =>
+//  firstStudent.name.localeCompare(secondStudent.name)
+// );
+// console.log(inAscendingScoreOrder);
+// console.log(inDescendingScoreOrder);
+// console.log(inAlphabeticalOrder);
+
+//!=============================================
+//Необхідно отримати масив їхніх імен, відсортованих за зростанням балів за тест.
+//З цією метою ми відсортуємо копію масиву методом sort(), після чого методом
+//map() створимо масив значень властивості name з відсортованого масиву.
+
+const students = [
+ { name: 'Манго', score: 83, courses: ['математика', 'фізика'] },
+ { name: 'Полі', score: 59, courses: ['інформатика', 'математика'] },
+ { name: 'Аякс', score: 37, courses: ['фізика', 'біологія'] },
+ { name: 'Ківі', score: 94, courses: ['література', 'інформатика'] }
+];
+
+// const sortedByAscendingScore = [...students].sort((a, b) => a.score - b.score);
+// const names = sortedByAscendingScore.map((student) => student.name);
+
+// console.log(names); // ['Аякс', 'Полі', 'Манго', 'Ківі']
+
+//! Ланцюжковий метод
+const names = [...students]
+  .sort((a, b) => a.score - b.score)
+  .map(student => student.name);
+
+console.log(names); // ['Аякс', 'Полі', 'Манго', 'Ківі']
+
+//Отримаємо масив унікальних відвідуваних предметів, відсортований за алфавітом.
+const uniqueSortedCourses = students
+  .flatMap(student => student.courses)
+  .filter((course, index, array) => array.indexOf(course) === index)
+  .sort((a, b) => a.localeCompare(b));
+
+// console.log(uniqueSortedCourses);
