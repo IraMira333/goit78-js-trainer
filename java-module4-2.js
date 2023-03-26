@@ -231,85 +231,85 @@
 
 //!===============================================
 // Change code below this line
-//    const users = [
-//     {
-//      name: 'Moore Hensley',
-//      email: 'moorehensley@indexia.com',
-//      eyeColor: 'blue',
-//      friends: ['Sharron Pace'],
-//      isActive: false,
-//      balance: 2811,
-//      skills: ['ipsum', 'lorem'],
-//      gender: 'male',
-//      age: 37
-//     },
-//     {
-//      name: 'Sharlene Bush',
-//      email: 'sharlenebush@tubesys.com',
-//      eyeColor: 'blue',
-//      friends: ['Briana Decker', 'Sharron Pace'],
-//      isActive: true,
-//      balance: 3821,
-//      skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
-//      gender: 'female',
-//      age: 34
-//     },
-//     {
-//      name: 'Ross Vazquez',
-//      email: 'rossvazquez@xinware.com',
-//      eyeColor: 'green',
-//      friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-//      isActive: false,
-//      balance: 3793,
-//      skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
-//      gender: 'male',
-//      age: 24
-//     },
-//     {
-//      name: 'Elma Head',
-//      email: 'elmahead@omatom.com',
-//      eyeColor: 'green',
-//      friends: ['Goldie Gentry', 'Aisha Tran'],
-//      isActive: true,
-//      balance: 2278,
-//      skills: ['adipisicing', 'irure', 'velit'],
-//      gender: 'female',
-//      age: 21
-//     },
-//     {
-//      name: 'Carey Barr',
-//      email: 'careybarr@nurali.com',
-//      eyeColor: 'blue',
-//      friends: ['Jordan Sampson', 'Eddie Strong'],
-//      isActive: true,
-//      balance: 3951,
-//      skills: ['ex', 'culpa', 'nostrud'],
-//      gender: 'male',
-//      age: 27
-//     },
-//     {
-//      name: 'Blackburn Dotson',
-//      email: 'blackburndotson@furnigeer.com',
-//      eyeColor: 'brown',
-//      friends: ['Jacklyn Lucas', 'Linda Chapman'],
-//      isActive: false,
-//      balance: 1498,
-//      skills: ['non', 'amet', 'ipsum'],
-//      gender: 'male',
-//      age: 38
-//     },
-//     {
-//      name: 'Sheree Anthony',
-//      email: 'shereeanthony@kog.com',
-//      eyeColor: 'brown',
-//      friends: ['Goldie Gentry', 'Briana Decker'],
-//      isActive: true,
-//      balance: 2764,
-//      skills: ['lorem', 'veniam', 'culpa'],
-//      gender: 'female',
-//      age: 39
-//     }
-//    ];
+// const users = [
+//  {
+//   name: 'Moore Hensley',
+//   email: 'moorehensley@indexia.com',
+//   eyeColor: 'blue',
+//   friends: ['Sharron Pace'],
+//   isActive: false,
+//   balance: 2811,
+//   skills: ['ipsum', 'lorem'],
+//   gender: 'male',
+//   age: 37
+//  },
+//  {
+//   name: 'Sharlene Bush',
+//   email: 'sharlenebush@tubesys.com',
+//   eyeColor: 'blue',
+//   friends: ['Briana Decker', 'Sharron Pace'],
+//   isActive: true,
+//   balance: 3821,
+//   skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+//   gender: 'female',
+//   age: 34
+//  },
+//  {
+//   name: 'Ross Vazquez',
+//   email: 'rossvazquez@xinware.com',
+//   eyeColor: 'green',
+//   friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//   isActive: false,
+//   balance: 3793,
+//   skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+//   gender: 'male',
+//   age: 24
+//  },
+//  {
+//   name: 'Elma Head',
+//   email: 'elmahead@omatom.com',
+//   eyeColor: 'green',
+//   friends: ['Goldie Gentry', 'Aisha Tran'],
+//   isActive: true,
+//   balance: 2278,
+//   skills: ['adipisicing', 'irure', 'velit'],
+//   gender: 'female',
+//   age: 21
+//  },
+//  {
+//   name: 'Carey Barr',
+//   email: 'careybarr@nurali.com',
+//   eyeColor: 'blue',
+//   friends: ['Jordan Sampson', 'Eddie Strong'],
+//   isActive: true,
+//   balance: 3951,
+//   skills: ['ex', 'culpa', 'nostrud'],
+//   gender: 'male',
+//   age: 27
+//  },
+//  {
+//   name: 'Blackburn Dotson',
+//   email: 'blackburndotson@furnigeer.com',
+//   eyeColor: 'brown',
+//   friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//   isActive: false,
+//   balance: 1498,
+//   skills: ['non', 'amet', 'ipsum'],
+//   gender: 'male',
+//   age: 38
+//  },
+//  {
+//   name: 'Sheree Anthony',
+//   email: 'shereeanthony@kog.com',
+//   eyeColor: 'brown',
+//   friends: ['Goldie Gentry', 'Briana Decker'],
+//   isActive: true,
+//   balance: 2764,
+//   skills: ['lorem', 'veniam', 'culpa'],
+//   gender: 'female',
+//   age: 39
+//  }
+// ];
 // Якщо не потрібно в функції:
 // const getUserNames = users.map((user) => user.name);
 // console.log(getUserNames);
@@ -474,3 +474,284 @@
 //  return activeUsers;
 // };
 // getInactiveUsers(users);
+
+//!===================================================
+//Використовуючи метод find(), доповни код таким чином, щоб:
+
+//У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title)
+//збігається зі значенням змінної BOOK_TITLE.
+//У змінній bookByAuthor утворився об'єкт книги, автор якої (властивість author)
+//збігається зі значенням змінної AUTHOR.
+
+// const books = [
+//  {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   rating: 8.38
+//  },
+//  {
+//   title: 'Beside Still Waters',
+//   author: 'Robert Sheckley',
+//   rating: 8.51
+//  },
+//  {
+//   title: 'The Dream of a Ridiculous Man',
+//   author: 'Fyodor Dostoevsky',
+//   rating: 7.75
+//  },
+//  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 }
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+// console.log(bookWithTitle);
+// console.log(bookByAuthor);
+
+//!==============================================
+//Доповни функцію getUserWithEmail(users, email) таким чином, щоб вона повертала
+//об'єкт користувача, пошта якого (властивість email) збігається зі значенням
+//параметра email.
+const users = [
+ {
+  name: 'Moore Hensley',
+  email: 'moorehensley@indexia.com',
+  eyeColor: 'blue',
+  friends: ['Sharron Pace'],
+  isActive: false,
+  balance: 2811,
+  gender: 'male'
+ },
+ {
+  name: 'Sharlene Bush',
+  email: 'sharlenebush@tubesys.com',
+  eyeColor: 'blue',
+  friends: ['Briana Decker', 'Sharron Pace'],
+  isActive: true,
+  balance: 3821,
+  gender: 'female'
+ },
+ {
+  name: 'Ross Vazquez',
+  email: 'rossvazquez@xinware.com',
+  eyeColor: 'green',
+  friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+  isActive: false,
+  balance: 3793,
+  gender: 'male'
+ },
+ {
+  name: 'Elma Head',
+  email: 'elmahead@omatom.com',
+  eyeColor: 'green',
+  friends: ['Goldie Gentry', 'Aisha Tran'],
+  isActive: true,
+  balance: 2278,
+  gender: 'female'
+ },
+ {
+  name: 'Carey Barr',
+  email: 'careybarr@nurali.com',
+  eyeColor: 'blue',
+  friends: ['Jordan Sampson', 'Eddie Strong'],
+  isActive: true,
+  balance: 3951,
+  gender: 'male'
+ },
+ {
+  name: 'Blackburn Dotson',
+  email: 'blackburndotson@furnigeer.com',
+  eyeColor: 'brown',
+  friends: ['Jacklyn Lucas', 'Linda Chapman'],
+  isActive: false,
+  balance: 1498,
+  gender: 'male'
+ },
+ {
+  name: 'Sheree Anthony',
+  email: 'shereeanthony@kog.com',
+  eyeColor: 'brown',
+  friends: ['Goldie Gentry', 'Briana Decker'],
+  isActive: true,
+  balance: 2764,
+  gender: 'female'
+ }
+];
+// const getUserWithEmail = (users, email) => {
+//  const userEmail = users.find((user) => user.email === email);
+//  console.log(userEmail);
+//  return userEmail;
+// };
+// getUserWithEmail(users, 'shereeanthony@kog.com');
+// getUserWithEmail(users, 'elmahead@omatom.com');
+// getUserWithEmail(users, 'blackburndotson@furnigeer.com');
+
+//!===========================================================
+//Використовуючи метод every(), доповни код таким чином, щоб:
+
+//У змінній eachElementInFirstIsEven був результат перевірки всіх
+//елементів масиву firstArray на парність.
+//У змінній eachElementInFirstIsOdd був результат перевірки всіх
+//елементів масиву firstArray на непарність.
+//У змінній eachElementInSecondIsEven був результат перевірки всіх
+//елементів масиву secondArray на парність.
+//У змінній eachElementInSecondIsOdd був результат перевірки всіх
+//елементів масиву secondArray на непарність.
+//У змінній eachElementInThirdIsEven був результат перевірки всіх
+//елементів масиву thirdArray на парність.
+//У змінній eachElementInThirdIsOdd був результат перевірки всіх
+//елементів масиву thirdArray на непарність.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every((el) => el % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every((el) => el % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every((el) => el % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every((el) => el % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every((el) => el % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every((el) => el % 2 !== 0);
+
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+// console.log(eachElementInSecondIsEven);
+// console.log(eachElementInSecondIsOdd);
+// console.log(eachElementInThirdIsEven);
+// console.log(eachElementInThirdIsOdd);
+
+//!============================================
+//Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла,
+//чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
+
+// const isEveryUserActive = (users) => {
+//  const activeUsers = users.every((user) => user.isActive);
+//  console.log(activeUsers);
+//  return activeUsers;
+// };
+// isEveryUserActive(users);
+
+//!=============================================
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(el => el % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(el => el % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(el => el % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(el => el % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(el => el % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(el => el % 2 !== 0);
+
+//!================================================
+// const isAnyUserActive = (users) => {
+//  const activeUsers = users.some((user) => user.isActive);
+//  console.log(activeUsers);
+//  return activeUsers;
+// };
+// isAnyUserActive(users);
+
+//!==================================================
+//Ігровому сервісу необхідний функціонал підрахунку середнього часу,
+//проведеного в іграх. Доповни код таким чином, щоб у змінній totalPlayTime
+//вийшло загальний ігровий час з масиву playtimes.
+// const players = {
+//  mango: 1270,
+//  poly: 468,
+//  ajax: 710,
+//  kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((previousValue, number) => {
+//  return previousValue + number;
+// }, 0);
+// console.log(totalPlayTime);
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(averagePlayTime);
+
+//!================================================
+//Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для
+//кожного гравця, і отримати загальну суму цих значень часу.
+//Розрахувати час для кожного з гравців можна, розділивши його час
+//(властивість playtime) на кількість ігор (властивість gamesPlayed).
+// const players = [
+//  { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//  { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//  { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//  { name: 'Kiwi', playtime: 241, gamesPlayed: 1 }
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//     const totalTime = total + (player.playtime / player.gamesPlayed);
+//     console.log(totalTime);
+//  return totalTime;
+// }, 0);
+
+//!===================================================
+//Доповни функцію calculateTotalBalance(users) таким чином, щоб вона рахувала і
+//повертала суму всіх коштів (властивість balance), які зберігають користувачі
+//з масиву users.
+
+// const calculateTotalBalance = (users) =>
+//  users.reduce((total, { balance }) => {
+//   const totalUser = total + balance;
+//   console.log(totalUser);
+//   return totalUser;
+//  }, 0);
+
+//  //!====Короткий запис===============
+//  const calculateTotalBalance = (users) =>
+//  users.reduce((total, { balance }) => total + balance, 0);
+
+// calculateTotalBalance(users);
+
+//!=======================================
+//Доповни функцію getTotalFriendCount(users) таким чином, щоб вона рахувала і
+//повертала загальну кількість друзів (властивість friends) усіх користувачів
+//з масиву users.
+// const getTotalFriendCount = (users) =>
+//  users.reduce((total, { friends }) => {
+//   const totalFriends = total + friends.length;
+//   console.log(totalFriends);
+//   return totalFriends;
+//  }, 0);
+
+//  const getTotalFriendCount = (users) =>
+//  users.reduce((total, { friends }) => total + friends.length, 0);
+
+// getTotalFriendCount(users);
+
+//!=============================================
+//Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву
+//releaseDates, відсортована за зростанням, а у змінній alphabeticalAuthors -
+//копія масиву імен авторів authors, відсортована за алфавітом.
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+ 'Tanith Lee',
+ 'Bernard Cornwell',
+ 'Robert Sheckley',
+ 'Fyodor Dostoevsky'
+];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+console.log(releaseDates);
+console.log(authors);
+console.log(ascendingReleaseDates);
+console.log(alphabeticalAuthors);
