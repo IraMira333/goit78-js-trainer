@@ -729,29 +729,217 @@ const users = [
 //   return totalFriends;
 //  }, 0);
 
-//  const getTotalFriendCount = (users) =>
-//  users.reduce((total, { friends }) => total + friends.length, 0);
+ const getTotalFriendCount = (users) =>
+ users.reduce((total, { friends }) => total + friends.length, 0);
 
-// getTotalFriendCount(users);
+console.log(getTotalFriendCount(users));
 
 //!=============================================
 //Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву
 //releaseDates, відсортована за зростанням, а у змінній alphabeticalAuthors -
 //копія масиву імен авторів authors, відсортована за алфавітом.
 
-const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
-const authors = [
- 'Tanith Lee',
- 'Bernard Cornwell',
- 'Robert Sheckley',
- 'Fyodor Dostoevsky'
-];
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//  'Tanith Lee',
+//  'Bernard Cornwell',
+//  'Robert Sheckley',
+//  'Fyodor Dostoevsky'
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(releaseDates);
+// console.log(authors);
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+//!===========================================
+//Доповни код таким чином, щоб у змінній ascendingReleaseDates вийшла копія масиву
+//releaseDates, відсортована за зростанням, а у змінній descendingReleaseDates -
+//копія, відсортована за спаданням.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+//!=============================================
+// const authors = [
+//  'Tanith Lee',
+//  'Bernard Cornwell',
+//  'Robert Sheckley',
+//  'Fyodor Dostoevsky',
+//  'Howard Lovecraft'
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort(
+//  (a, b) => a.localeCompare(b),
+//  []
+// );
+
+// const authorsInReversedOrder = [...authors].sort(
+//  (a, b) => b.localeCompare(a),
+//  []
+// );
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+//!==================================================
+//Доповни код таким чином, щоб:
+
+//У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям автора в алфавітному порядку.
+//У змінній sortedByReversedAuthorName вийшов масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку.
+//У змінній sortedByAscendingRating вийшов масив книг, відсортований за зростанням рейтингу.
+//У змінній sortedByDescentingRating вийшов масив книг, відсортований за спаданням рейтингу.
+
+// const books = [
+//  {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   rating: 8.38
+//  },
+//  {
+//   title: 'Beside Still Waters',
+//   author: 'Robert Sheckley',
+//   rating: 8.51
+//  },
+//  {
+//   title: 'The Dream of a Ridiculous Man',
+//   author: 'Fyodor Dostoevsky',
+//   rating: 7.75
+//  },
+//  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 }
+// ];
 // Change code below this line
 
-const ascendingReleaseDates = [...releaseDates].sort();
+// const sortedByAuthorName = [...books].sort((a, b) =>
+//  a.author.localeCompare(b.author)
+// );
 
-const alphabeticalAuthors = [...authors].sort();
-console.log(releaseDates);
-console.log(authors);
-console.log(ascendingReleaseDates);
-console.log(alphabeticalAuthors);
+// const sortedByReversedAuthorName = [...books].sort((a, b) =>
+//  b.author.localeCompare(a.author)
+// );
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+// console.table(sortedByAuthorName);
+// console.table(sortedByReversedAuthorName);
+// console.table(sortedByAscendingRating);
+// console.table(sortedByDescentingRating);
+
+//!=================================================
+//Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона повертала
+//масив користувачів, відсортований за зростанням їх балансу (властивість balance).
+
+// const sortByAscendingBalance = (users) => {
+//  const userBalance = [...users].sort((a, b) => a.balance - b.balance);
+//  return userBalance;
+// };
+// const sortByAscendingBalance = (users) =>
+//  [...users].sort((a, b) => a.balance - b.balance);
+// console.table(sortByAscendingBalance(users));
+
+//Доповни функцію sortByDescendingFriendCount(users) таким чином, щоб вона
+//повертала масив користувачів, відсортований за спаданням кількості їхніх
+//друзів (властивість friends).
+
+// const sortByDescendingFriendCount = (users) => {
+//  const userFriend = [...users].sort((a, b) => b.friends.length - a.friends.length);
+//  return userFriend;
+// };
+
+// const sortByDescendingFriendCount = (users) =>
+//  [...users].sort((a, b) => b.friends.length - a.friends.length);
+
+// console.table(sortByDescendingFriendCount(users));
+
+//Доповни функцію sortByName(users) таким чином, щоб вона повертала масив
+//користувачів, відсортований за їх ім'ям (властивість name) в алфавітному порядку.
+
+// const sortByName = (users) =>
+//  [...users].sort((a, b) => a.name.localeCompare(b.name));
+// console.table(sortByName(users));
+
+//!====================================================
+//Доповни код таким чином, щоб у змінній names вийшов масив імен авторів в
+//алфавітному порядку, рейтинг книг яких більший за значення змінної MIN_BOOK_RATING.
+
+// const books = [
+//  {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   rating: 8.38
+//  },
+//  {
+//   title: 'Beside Still Waters',
+//   author: 'Robert Sheckley',
+//   rating: 8.51
+//  },
+//  {
+//   title: 'The Dream of a Ridiculous Man',
+//   author: 'Fyodor Dostoevsky',
+//   rating: 7.75
+//  },
+//  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//  {
+//   title: 'The Dreams in the Witch House',
+//   author: 'Howard Lovecraft',
+//   rating: 8.67
+//  }
+// ];
+// const MIN_BOOK_RATING = 8;
+// Change code below this line
+
+// const names = books
+//  .filter((book) => book.rating > MIN_BOOK_RATING)
+//  .map((book) => book.author)
+//  .sort((a, b) => a.localeCompare(b));
+// console.log(names);
+// console.table(books);
+
+//!==================================================
+//Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб вона
+//повертала масив імен користувачів, відсортований за зростанням кількості
+//їхніх друзів (властивість friends).
+// const getNamesSortedByFriendCount = (users) =>
+//  [...users]
+//   .sort((a, b) => a.friends.length - b.friends.length)
+//   .map((user) => user.name);
+
+// console.log(getNamesSortedByFriendCount(users));
+
+//!=====================================================
+//Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала масив
+//унікальних імен друзів (властивість friends), відсортований за алфавітом.
+
+// const getSortedFriends = (users) =>
+//  users
+//   .flatMap((user) => user.friends)
+//   .filter((user, index, array) => array.indexOf(user) === index)
+//   .sort((a, b) => a.localeCompare(b));
+
+// console.log(getSortedFriends(users));
+// console.log(users);
+
+//!======================================================
+//Доповни функцію getTotalBalanceByGender(users, gender) таким чином, щоб вона
+//повертала загальний баланс користувачів (властивість balance),
+//стать яких (властивість gender) збігається зі значенням параметра gender.
+const getTotalBalanceByGender = (users, gender) =>
+ users
+  .filter((user) => user.gender === gender)
+  .reduce((total, { balance }) => total + balance, 0);
+console.table(getTotalBalanceByGender(users, 'male'));
