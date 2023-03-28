@@ -883,5 +883,3 @@
 // const filteredNumbers = numbers.filter(value => value > 3);
 // console.log(filteredNumbers); // [4, 5]
 
-
-
