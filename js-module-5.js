@@ -199,28 +199,95 @@
 //removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву товарів у властивості items об'єкта, який викликає цей метод.
 //Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
 
-class Storage {
- constructor(items) {
-  this.items = items;
+// class Storage {
+//  constructor(items) {
+//   this.items = items;
+//  }
+//  getItems() {
+//   return this.items;
+//  }
+//  addItem(newItem) {
+//   this.items.push(newItem);
+//  }
+//  removeItem(itemToRemove) {
+//   if (this.items.includes(itemToRemove)) {
+//    const index = this.items.indexOf(itemToRemove);
+//    return this.items.splice(index, 1);
+//   }
+//  }
+// }
+
+// // Change code above this line
+// const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem('Droid');
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem('Prolonger');
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+//!=========================
+//Напиши клас StringBuilder, який приймає один параметр initialValue - довільний рядок, який записується у властивість value об'єкта, що створюється.
+
+//Оголоси наступні методи класу:
+
+//getValue() - повертає поточне значення властивості value.
+//padEnd(str) - отримує параметр str (рядок) і додає його в кінець значення властивості value об'єкта, який викликає цей метод.
+//padStart(str) - отримує параметр str (рядок) і додає його на початок значення властивості value об'єкта, який викликає цей метод.
+//padBoth(str) - отримує параметр str (рядок) і додає його на початок і в кінець значення властивості value об'єкта, який викликає цей метод.
+
+// class StringBuilder {
+//  constructor(initialValue) {
+//   this.value = initialValue;
+//  }
+//  getValue() {
+//   return this.value;
+//  }
+//  padEnd(str) {
+//   this.value = this.value += str;
+//  }
+//  padStart(str) {
+//   this.value = str += this.value;
+//  }
+//  padBoth(str) {
+//   this.value = str += this.value += str;
+//  }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // "."
+// builder.padStart('^');
+// console.log(builder.getValue()); // "^."
+// builder.padEnd('^');
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth('=');
+// console.log(builder.getValue()); // "=^.^="
+
+//!==================================
+
+class Car {
+ // Change code below this line
+ #brand;
+ constructor({ brand, model, price } = {}) {
+  this.#brand = brand;
+  this.model = model;
+  this.price = price;
  }
- getItems() {
-  return this.items;
+ getBrand() {
+  return this.#brand;
  }
- addItem(newItem) {
-  this.items.push(newItem);
+ changeBrand(newBrand) {
+  this.#brand = newBrand;
  }
- removeItem(itemToRemove) {
-  if (this.items.includes(itemToRemove)) {
-   const index = this.items.indexOf(itemToRemove);
-   return this.items.splice(index, 1);
-  }
- }
+ // Change code above this line
 }
 
-// Change code above this line
-const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem('Droid');
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem('Prolonger');
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+const car1 = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+const car2 = new Car({ brand: 'bmw', model: 'X5', price: 58900 });
+const car3 = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
+console.log(car1);
+console.log(car2);
+console.log(car3);
+console.dir(Car);
+car3.changeBrand('Honda');
+console.log(car3);
