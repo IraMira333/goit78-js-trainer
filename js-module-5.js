@@ -358,40 +358,211 @@
 // console.log(builder.getValue()); // "=^.^="
 
 //!======================================
-class Car {
+// class Car {
+//  // Change code below this line
+//  #brand;
+//  #model;
+//  #price;
+
+//  constructor({ brand, model, price }) {
+//   this.#brand = brand;
+//   this.#model = model;
+//   this.#price = price;
+//  }
+
+//  get brand() {
+//   return this.#brand;
+//  }
+
+//  set brand(newBrand) {
+//   this.#brand = newBrand;
+//  }
+
+//  get model() {
+//   return this.#model;
+//  }
+
+//  set model(newModel) {
+//   this.#model = newModel;
+//  }
+
+//  get price() {
+//   return this.#price;
+//  }
+
+//  set price(newPrice) {
+//   this.#price = newPrice;
+//  }
+//  // Change code above this line
+// }
+
+//!==============================
+// class Car {
+//  // Change code below this line
+//  #price;
+//  static MAX_PRICE = 50000;
+//  constructor({ price }) {
+//   this.#price = price;
+//  }
+
+//  get price() {
+//   return this.#price;
+//  }
+
+//  set price(newPrice) {
+//   if (newPrice <= Car.MAX_PRICE) {
+//    this.#price = newPrice;
+//   }
+//  }
+//  // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+//!========================================
+// class Car {
+//  static #MAX_PRICE = 50000;
+//  // Change code below this line
+//  static checkPrice(price) {
+//   if (price <= this.#MAX_PRICE) {
+//    return `Success! Price is within acceptable limits`;
+//   }
+//   return `Error! Price exceeds the maximum`;
+//  }
+//  // Change code above this line
+//  constructor({ price }) {
+//   this.price = price;
+//  }
+// }
+
+// const audi = new Car({ price: 36000 });
+// console.log('🚀 ~ file: js-module-5.js:446 ~ audi:', audi);
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+//!=========================================
+// class User {
+//  constructor(email) {
+//   this.email = email;
+//  }
+
+//  get email() {
+//   return this.email;
+//  }
+
+//  set email(newEmail) {
+//   this.email = newEmail;
+//  }
+// }
+// // Change code below this line
+
+// class Admin extends User {
+//  static AccessLevel = {
+//   BASIC: 'basic',
+//   SUPERUSER: 'superuser'
+//  };
+// }
+// Admin.AccessLevel.BASIC;
+// console.log("🚀 ~ file: js-module-5.js:475 ~ Admin.AccessLevel.BASIC:", Admin.AccessLevel.BASIC)
+// Admin.AccessLevel.SUPERUSER;
+// console.log("🚀 ~ file: js-module-5.js:477 ~ Admin.AccessLevel.SUPERUSER:", Admin.AccessLevel.SUPERUSER)
+
+//!====================================
+// class User {
+//  email;
+
+//  constructor(email) {
+//   this.email = email;
+//  }
+
+//  get email() {
+//   return this.email;
+//  }
+
+//  set email(newEmail) {
+//   this.email = newEmail;
+//  }
+// }
+
+// class Admin extends User {
+//  // Change code below this line
+//  constructor({ email, accessLevel }) {
+//   super(email);
+//   this.accessLevel = accessLevel;
+//  }
+//  static AccessLevel = {
+//   BASIC: 'basic',
+//   SUPERUSER: 'superuser'
+//  };
+
+//  // Change code above this line
+// }
+
+// const mango = new Admin({
+//  email: 'mango@mail.com',
+//  accessLevel: Admin.AccessLevel.SUPERUSER
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+//!===========================================
+class User {
+ email;
+
+ constructor(email) {
+  this.email = email;
+ }
+
+ get email() {
+  return this.email;
+ }
+
+ set email(newEmail) {
+  this.email = newEmail;
+ }
+}
+class Admin extends User {
  // Change code below this line
- #brand;
- #model;
- #price;
+ blacklistedEmails = [];
+ static AccessLevel = {
+  BASIC: 'basic',
+  SUPERUSER: 'superuser'
+ };
 
- constructor({ brand, model, price }) {
-  this.#brand = brand;
-  this.#model = model;
-  this.#price = price;
+ constructor({ email, accessLevel }) {
+  super(email);
+  this.accessLevel = accessLevel;
  }
 
- get brand() {
-  return this.#brand;
+ blacklist(email) {
+  this.blacklistedEmails.push(email);
  }
-
- set brand(newBrand) {
-  this.#brand = newBrand;
- }
-
- get model() {
-  return this.#model;
- }
-
- set model(newModel) {
-  this.#model = newModel;
- }
-
- get price() {
-  return this.#price;
- }
-
- set price(newPrice) {
-  this.#price = newPrice;
+ isBlacklisted(email) {
+  return this.blacklistedEmails.includes(email);
  }
  // Change code above this line
 }
+
+const mango = new Admin({
+ email: 'mango@mail.com',
+ accessLevel: Admin.AccessLevel.SUPERUSER
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+mango.blacklist('poly@mail.com');
+mango.blacklist('doly@mail.com');
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted('mango@mail.com')); // false
+console.log(mango.isBlacklisted('poly@mail.com')); // true
